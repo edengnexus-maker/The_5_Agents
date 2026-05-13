@@ -15,7 +15,7 @@ aliases: [env-template, environment-variables]
 | משתנה | חובה/אופציונלי | שימוש |
 |--------|----------------|-------|
 | `ANTHROPIC_API_KEY` | **חובה** | מפתח Claude API — משמש את **כל** הסוכנים |
-| `OPENAI_API_KEY` | אופציונלי | יצירת תמונות עבור **יובל** (מעצב) |
+| `OPENAI_API_KEY` | **חובה ליובל** | יצירת תמונות דרך [[skill-gpt-image-gen]] (מודל `gpt-image-2`) |
 | `TAVILY_API_KEY` | אופציונלי | חיפוש ברשת עבור **חן** (חוקרת) |
 | `BRAVE_SEARCH_API_KEY` | אופציונלי | חלופה לחיפוש ברשת עבור **חן** |
 

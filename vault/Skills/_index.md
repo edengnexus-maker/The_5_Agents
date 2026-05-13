@@ -30,3 +30,6 @@
 - [[skill-obsidian-markdown]] — Obsidian Flavored Markdown: wikilinks, embeds, callouts
 - [[skill-obsidian-vault-workflow]] — ניהול vault: קרא לפני, עדכן אחרי (כל משימה)
 - [[skill-obsidian-bases]] — יצירת Bases (.base files) עם views ל-vault
+
+### סקילים ספציפיים לפרויקט
+- [[skill-gpt-image-gen]] — מעטפת ל-OpenAI Images API (מודל `gpt-image-2`), משמש את [[agent-yuval]]
