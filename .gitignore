@@ -1,0 +1,16 @@
+# Secrets / local config
+.env
+.env.local
+.env.*.local
+
+# Claude Code local settings (per-machine, not for sharing)
+.claude/settings.local.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp

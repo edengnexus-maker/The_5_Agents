@@ -21,6 +21,18 @@
 - `skills/` - יכולות מותאמות שהצוות יכול להפעיל
 - `commands/` - פקודות מותאמות (slash commands)
 
+## כללי עבודה עם Vault הזיכרון
+
+**בתחילת כל סשן ולפני כל פקודה** — יש להפעיל את ה-skill `obsidian-vault-workflow`:
+
+1. קרא את קובץ הנושא הרלוונטי מ-`vault/`
+2. עדכן אותו בסוף המשימה עם session log entry
+
+ה-vault נמצא ב-`vault/` בשורש הפרויקט ומכיל:
+- `vault/Meeting Notes/` — session logs טכניים
+- `vault/Project Structure/` — תיעוד קבצי הפרויקט
+- `vault/Skills/` — תיעוד כל הסקילים
+
 ## הערה
 
 זהו קובץ ראשוני המגדיר את התשתית בלבד.
