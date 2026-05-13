@@ -17,7 +17,10 @@
   - **Trigger (עברית)**: תמונה של, ציור של, תיצור תמונה, איור, ויזואל
   - **Trigger (English)**: image of, picture of, generate image, illustration, draw, visual
   - **Flow**: סורק `yuval/reference/`, מחלץ סגנון, מנסח prompt, קורא לסקיל `gpt-image-gen` (OpenAI `gpt-image-2`), שומר ל-`yuval/outputs/<YYYY-MM-DD>-<slug>.png` + sibling `.txt` עם ה-prompt.
-- **חן** - החוקרת. אחראית על איסוף מידע, מחקר ובדיקת עובדות.
+- **חן** (`chen`) — חוקרת הרשת. מחפשת מקורות אמינים ברשת ומכינה אותם ב-`Content/`.
+  - **Trigger (עברית)**: חפש, מצא, מחקר, מאמר על, חדש על, מה קורה עם, מקור על
+  - **Trigger (English)**: search, find, research, article about, latest on, news on, source on
+  - **Flow**: בודקת זיכרון ב-`chen/Memory/searches.md`, מבצעת WebSearch + WebFetch, שומרת תוצאה ב-`Content/YYYY-MM-DD-<slug>.md`, מדווחת לראובן.
 
 ## חיבור יעל ↔ יובל — תהליך מאמר עם תמונות
 
@@ -34,18 +37,31 @@
 
 > נתיב יחסי `../yuval/outputs/` עובד כי גם `Output/` וגם `yuval/` יושבים בשורש הפרויקט.
 
+## חיבור חן → יעל → יובל — תהליך מלא מהרשת
+
+כשמקבלים בקשה ליצירת תוכן חדש מהאינטרנט:
+
+1. **הפעל את חן** עם הנושא / מילות מפתח
+2. **חן מחזירה** שם קובץ ב-`Content/` + לינק למקור
+3. **אם הבקשה כללה שכתוב/פרסום** — ממשיך אוטומטית:
+   - **הפעל את יעל** על הקובץ שחן יצרה ב-`Content/`
+   - **אם יעל ביקשה תמונות** — הפעל את יובל לכל `{{IMAGE_NEEDED}}` placeholder
+   - **שלב הכל** ב-`Output/` (ראה Flow יעל↔יובל למעלה)
+4. **אם הבקשה הייתה רק "מצא לי מאמר"** — עצור ודווח למשתמש
+
 ## מבנה התיקיות
 
 תחת `.claude/`:
-- `agents/` — הגדרות הסוכנים (`yael-content-writer.md`, `yuval.md`, בעתיד `chen.md`)
+- `agents/` — הגדרות הסוכנים (`yael-content-writer.md`, `yuval.md`, `chen.md`)
 - `skills/` — יכולות מותאמות (`gpt-image-gen/`, וכן הסקילים המובנים)
 - `commands/` — slash commands מותאמים
 
 תיקיות עבודה בשורש הפרויקט:
-- `Content/` — מאמרי גלם להזנת יעל
+- `Content/` — מאמרי גלם להזנת יעל (חן שמה כאן את ממצאיה)
 - `Output/` — תוצרי יעל (md + html), אחרי שילוב תמונות מיובל
 - `yael/` — `style-guide.md`, `reference/` (דוגמאות סגנון כתיבה), `templates/article.html`
 - `yuval/` — `reference/` (השראת סגנון ויזואלי), `outputs/` (תמונות מוגמרות + sidecar prompts)
+- `chen/` — תיקיית עבודה של חן: `Memory/searches.md` (לוג כל החיפושים)
 - `vault/` — Obsidian vault לזיכרון ארוך-טווח
 
 ## כללי עבודה עם Vault הזיכרון
